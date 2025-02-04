@@ -12,7 +12,7 @@ import os
 
 
 st.set_page_config(page_title="Chat with Websites", page_icon="🤖")
-st.header("🤖 Chat with Websites")
+st.title("🤖 Chat with Websites")
 # ✅ Load environment variables
 load_dotenv()
 
@@ -77,8 +77,7 @@ def get_response(user_input, vector_store):
     response = chain({"input_documents": docs, "question": user_input}, return_only_outputs=True)
     return response["output_text"]
 
-# ✅ Streamlit UI
-st.title("🤖 Chat with Websites using Gemini AI")
+
 
 # ✅ Sidebar for website URL input
 with st.sidebar:
